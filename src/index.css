@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes cybee-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.animate-cybee-pulse {
+  animation: cybee-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes cybee-glow {
+  0%, 100% { box-shadow: 0 0 16px rgba(0, 229, 255, 0.25); }
+  50% { box-shadow: 0 0 34px rgba(0, 229, 255, 0.55); }
+}
+.animate-cybee-glow {
+  animation: cybee-glow 2.6s ease-in-out infinite;
+}
+
+@keyframes cybee-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-cybee-float {
+  animation: cybee-float 5s ease-in-out infinite;
+}
+
+@keyframes cybee-rise {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-cybee-rise {
+  animation: cybee-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cybee-scan {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(320%); }
+}
+.animate-cybee-scan {
+  animation: cybee-scan 1.8s ease-in-out infinite;
+}
